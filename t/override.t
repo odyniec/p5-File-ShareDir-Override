@@ -23,7 +23,7 @@ is(File::ShareDir::module_file('File::ShareDir::Override', 'gimme.pl.z'),
     File::Spec->catfile('/delicious/cherry/pie', 'gimme.pl.z'),
     'The expected module_file is returned');
 
-dies_ok { File::ShareDir::dist_dir('File-ShareDir-Override') }
+dies_ok { File::ShareDir::dist_dir('File-ShareDir-Override-Nonexisting') }
     'Dies with unknown dist';
 
 dies_ok { File::ShareDir::module_dir('File::ShareDir::Override::Nonexisting') }
