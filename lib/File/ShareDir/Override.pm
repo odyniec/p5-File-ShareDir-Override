@@ -33,7 +33,7 @@ sub import {
     no strict 'refs';
     no warnings 'redefine';
     *{"File::ShareDir::dist_dir"} = sub {
-        my ($dist) = File::ShareDir::_DIST(shift);
+        my $dist = File::ShareDir::_DIST(shift);
 
         return $dist_dirs{$dist} || &$_File_ShareDir_dist_dir($dist);
     };
