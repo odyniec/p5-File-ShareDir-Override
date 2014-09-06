@@ -1,0 +1,64 @@
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+File::ShareDir::Override - Override directories returned by File::ShareDir
+
+=head1 VERSION
+
+version 0.100
+
+=head1 SYNOPSIS
+
+Run C<program.pl> and make Foo::Bar think its distribution's shared directory is
+C<./share>:
+
+    perl -MFile::ShareDir::Override=Foo-Bar:./share program.pl
+
+Pretend Foo::Bar's module shared directory is C<./lib>:
+
+    perl -MFile::ShareDir::Override=Foo::Bar:./lib program.pl
+
+=head1 DESCRIPTION
+
+(TBA)
+
+Top-level modules/distributions (e.g., Dancer or Plack) don't have any dashes or
+double colons in the name and can't be recognized, so they need an explicit
+C<:dist> or C<:module> between the name and path. Example:
+
+    perl -MFile::ShareDir::Override=Foo:module:./lib program.pl
+
+=for :stopwords cpan testmatrix url annocpan anno bugtracker rt cpants kwalitee diff irc mailto metadata placeholders metacpan
+
+=head1 SUPPORT
+
+=head2 Bugs / Feature Requests
+
+Please report any bugs or feature requests through the issue tracker
+at L<https://github.com/odyniec/p5-File-ShareDir-Override/issues>.
+You will be notified automatically of any progress on your issue.
+
+=head2 Source Code
+
+This is open source software.  The code repository is available for
+public review and contribution under the terms of the license.
+
+L<https://github.com/odyniec/p5-File-ShareDir-Override>
+
+  git clone https://github.com/odyniec/p5-File-ShareDir-Override.git
+
+=head1 AUTHOR
+
+Michal Wojciechowski <odyniec@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2014 by Michal Wojciechowski.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
