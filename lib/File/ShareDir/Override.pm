@@ -116,3 +116,7 @@ double colons in the name and can't be recognized, so they need an explicit
 C<:dist> or C<:module> between the name and path. Example:
 
     perl -MFile::ShareDir::Override=Foo:module:./lib program.pl
+
+Usage with C<prove>:
+
+    PERL5OPT=-MFoo-Bar:./share prove sometests.t
