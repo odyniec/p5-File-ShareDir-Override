@@ -39,7 +39,7 @@ sub import {
                 # Assume dist_dir ("Foo-Bar:/some/path" or "Foo:/some/path")
                 $dist_dirs{$opt[0]} = $opt[1];
             }
-        } split ',', $dir;
+        } split ';', $dir;
     }
     else {
         # TODO: Guess the distribution and the share directory?
