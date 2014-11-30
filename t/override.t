@@ -7,7 +7,7 @@ BEGIN {
 }
 
 use File::ShareDir::Override
-    'Foo-Bar:/omnomnom/cookie,File::ShareDir::Override:/delicious/cherry/pie';
+    'Foo-Bar:/omnomnom/cookie;File::ShareDir::Override:/delicious/cherry/pie';
 
 is(File::ShareDir::dist_dir('Foo-Bar'), '/omnomnom/cookie',
     'The expected dist_dir is returned');
